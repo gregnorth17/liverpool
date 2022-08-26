@@ -1,0 +1,9 @@
+.fixtures-section {
+	display: flex;
+	justify-content: center;
+}
+.fixtures {
+	display: grid;
+	grid-template-columns: 375px 375px;
+	margin: 1.5em 0;
+}

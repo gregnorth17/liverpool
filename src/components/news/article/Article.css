@@ -1,0 +1,39 @@
+.article {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	border: 1px solid var(--gray);
+	border-radius: 10px;
+	background: var(--dk-gray);
+	margin-bottom: 1em;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.article-title-link:hover {
+	text-decoration: underline;
+	text-decoration-color: #fff;
+}
+
+.article-title {
+	margin-top: 0;
+	font-size: 1rem;
+	color: #fff;
+}
+
+.article-author,
+.article-source {
+	font-size: .825rem;
+}
+
+.article-author {
+	margin-bottom: .3em;
+}
+
+.article-image {
+	width: 140px;
+	border-radius: 20px;
+}

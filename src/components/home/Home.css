@@ -1,0 +1,76 @@
+.home {
+	display: flex;
+	height: 100vh;
+	background-color: black;
+	color: #fff;
+}
+
+.home-lfc {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+	height: 100%;
+	width: 50%;
+	background: url("../../images/home-lfc.jpg") no-repeat center;
+}
+
+.home-lfcm {
+	height: 100%;
+	width: 50%;
+	background: url("../../images/home-lfcm.jpg") no-repeat center;
+}
+
+.home-container {
+	padding: 3em;
+	border-radius: 25px;
+	border: 1px solid #fff;
+	background: rgba(0, 0, 0, .9);
+	margin-right: -26em;
+	z-index: 1;
+	text-align: center;
+}
+
+.home-title {
+	margin-top: 0;
+	margin-bottom: .25em;
+	font-size: 5rem;
+}
+
+/* .home-title-lfc {
+	color: #C8102E;
+}
+
+.home-title-lfcm {
+	color:#1a388e;
+} */
+
+.home-text {
+	margin-bottom: 1.5em;
+	font-size: 1.5rem;
+}
+
+.btn {
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.5rem;
+	border: none;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+	cursor: pointer;
+
+}
+.btn:hover {
+	opacity: .8;
+}
+
+.btn-lfc {
+	margin-right: 1em;
+	background: var(--red);
+}
+
+.btn-lfcm {
+	margin-left: 3em;
+	background: var(--blue);
+}

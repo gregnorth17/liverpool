@@ -1,0 +1,74 @@
+.table-section {
+	color: #fff;
+	padding: 1.5em 0;
+}
+
+table {
+	margin: 0 auto;
+	border: 1px solid var(--gray);
+	max-width: 750px;
+	background: #202124;
+	border-collapse: collapse; 
+}
+
+.row-header {
+	padding-left: 1.2em;
+	text-align: left;
+}
+
+.team-pr {
+	padding-right: 3em;
+}
+
+th {
+	padding: .7em 0;
+}
+
+td {
+	padding: .5em .2em ;
+}
+
+.table-caption {
+	font-size: .75em;
+	background: var(--dk-gray);
+	border: 2px solid var(--gray);
+	padding: 1em;
+	margin-top: 1em;
+	caption-side: bottom;
+	max-width: 300px;
+}
+
+.table-caption-title {
+	padding-left: .4em;
+	margin-top: 0;
+	text-align: left;
+}
+
+.competition {
+	display: flex;
+	align-items: center;
+}
+
+.competition::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: .3em;
+}
+
+.competition.champ-league::before {
+	background: #4285F4;
+}
+
+.competition.europa-league::before {
+	background: #FA7B17;
+}
+
+.competition.europa-conference::before {
+	background: #34A853;
+}
+
+.competition.relegation::before {
+	background: #EA4335;
+}

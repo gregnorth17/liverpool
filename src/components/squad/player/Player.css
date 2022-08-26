@@ -1,0 +1,18 @@
+.player {
+	padding: 1.5em .75em;
+	max-width: 200px;
+	background: var(--dk-gray);
+	color: #fff;
+	text-align: center;
+	border: 1px solid var(--gray);
+	border-radius: 25px;
+}
+
+.player-name {
+	margin: .5em 0;
+}
+
+p {
+	margin-bottom: .3em;
+}
+

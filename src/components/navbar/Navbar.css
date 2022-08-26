@@ -1,0 +1,21 @@
+nav {
+	display: flex;
+	justify-content: center;
+	/* width: 100%; */
+	/* position: fixed; */
+	/* opacity: .5; */
+	/* padding: 2em .5em; */
+}
+
+.nav-link {
+	padding: 2.5em 1.5em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1em;
+	letter-spacing: 0.3em;
+}
+
+.nav-link:hover {
+	opacity: .5;
+}

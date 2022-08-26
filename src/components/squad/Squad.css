@@ -1,0 +1,9 @@
+.squad {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
+	margin: 0 auto;
+	padding: 1em 0;
+	max-width: 650px;
+}
+

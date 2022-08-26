@@ -1,0 +1,61 @@
+.fixture {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5em 2.5em;
+	width: 375px;
+	border: 1px solid gray;
+	font-size: .75rem;
+	color: #fff;
+	background: var(--dk-gray);
+}
+
+p {
+	margin: 0;
+}
+
+.competition {
+	margin: 0 0 .5em 0;
+}
+
+.teams {
+	width: 70%;
+}
+
+.team {
+	display: flex;
+	align-items: center;
+	
+	padding: .5em;
+}
+
+.team-image {
+	width: 25px;
+	margin-right: .75em;
+}
+
+.team-name {
+	margin-bottom: 0;
+}
+
+.score {
+	margin-left: auto;
+}
+
+.date-time {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 1.70em;
+	/* padding-right: .75em; */
+	text-align: center;
+}
+
+.date,
+.time {
+	margin-bottom: .5em;
+}
+
+.score-home-team {
+	margin-bottom: 1.6em;
+}
