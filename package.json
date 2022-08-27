@@ -1,6 +1,6 @@
 {
 	"homepage": "https://gregnorth17.github.io/liverpool-app",
-	"name": "liverpool",
+	"name": "liverpool-app",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
