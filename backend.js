@@ -1,6 +1,7 @@
 const PORT = 8000;
 const express = require("express");
 const cors = require("cors");
+const axios = require("axios");
 require("dotenv").config();
 
 const app = express();
@@ -19,8 +20,23 @@ app.get("/fixtures", (req, res) => {
 			}
 		})
 		.then(response => response.json())
-		.then(data => res.json(data.response))
+		.then(data => {
+			console.log(req)
+			res.json(data.response)
+		})
 		.catch(error => console.log(error))
+})
+
+app.get("/fixturedetails", (req, res) =>  {
+	fetch("https://v3.football.api-sports.io/fixtures/statistics?fixture=867947&team=40", {
+		method: "GET",
+		headers: {
+			"x-apisports-key" : process.env.LIVERPOOL_APP_X_APISPORTS_KEY
+		}
+	})
+	.then(response => response.json())
+	.then(data => res.json(data))
+	.catch(err => console.log(err))
 })
 
 app.get("/squad", (req, res) => {
@@ -31,7 +47,10 @@ app.get("/squad", (req, res) => {
 			}
 		})
 		.then(response => response.json())
-		.then(data => res.json(data))
+		.then(data => {
+			console.log(req);
+			res.json(data)
+		})
 		.catch(error => console.log(error))
 })
 
