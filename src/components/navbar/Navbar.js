@@ -7,6 +7,7 @@ const Navbar = ({lfc}) => {
 	}
 	return (
 		<nav style={style}>
+			{/* <NavLink className="nav-link" to="/">Home</NavLink> */}
 			<NavLink className="nav-link" to="/fixtures">Fixtures</NavLink>
 			{/* <NavLink className="nav-link" to="/liverpool/news">News</NavLink> */}
 			<NavLink className="nav-link" to="/table">Table</NavLink>
