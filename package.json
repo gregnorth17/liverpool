@@ -1,6 +1,6 @@
 {
 	"homepage": "https://gregnorth17.github.io/liverpool",
-	"name": "liverpool",
+	"name": "liverpool-app",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
@@ -24,7 +24,8 @@
 		"deploy": "gh-pages -d build",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"dev": "netlify dev"
 	},
 	"eslintConfig": {
 		"extends": [

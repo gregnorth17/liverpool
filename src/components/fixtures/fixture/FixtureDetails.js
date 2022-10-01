@@ -7,7 +7,12 @@ const FixtureDetails = (props) => {
 	console.log(fixtureId);
 
 	useEffect(() => {
-		fetch(`http://localhost:8000/fixturedetails`)
+		fetch("https://v3.football.api-sports.io/fixtures/statistics?fixture=867947&team=40", {
+			method: "GET",
+			headers: {
+				"x-apisports-key" : process.env.REACT_APP_API_KEY
+			}
+		})
 	.then(response => response.json())
 	.then(data => console.log(data))
 	.catch(err => {

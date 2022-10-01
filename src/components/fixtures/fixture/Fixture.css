@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 1.5em 2.5em;
-	width: 375px;
+	max-width: 375px;
 	border: 1px solid gray;
 	font-size: .75rem;
 	color: #fff;
@@ -24,7 +24,6 @@ p {
 .team {
 	display: flex;
 	align-items: center;
-	
 	padding: .5em;
 }
 

@@ -4,14 +4,14 @@
 }
 
 .club-badge-td {
-	display: flex;
+	/* display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center; */
 }
 
 .club-name {
 	text-align: left;
-	padding-right: 3em;
+	/* padding-right: 3em; */
 }
 
 tr.position-data {

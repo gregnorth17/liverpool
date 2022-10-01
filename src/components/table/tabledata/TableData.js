@@ -2,11 +2,12 @@ import "./TableData.css";
 const TableData = (props) => {
 	
 	try {
-			const leagueTable = props.table[0].league.standings[0];
-			console.log(leagueTable);
+			// const leagueTable = props.table[0].league.standings[0];
 			
-			return leagueTable.map((position, index) => {
-
+			const leagueTable = props.table.response[0].league.standings;
+			console.log(leagueTable[0]);
+			return leagueTable[0].map((position, index) => {
+				console.log(position.rank)
 				const addBorderLeft = promotionPlaces => {
 					const promotionColor = {
 						"Promotion - Champions League (Group Stage)" : "#4285F4",

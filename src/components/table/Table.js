@@ -6,7 +6,12 @@ const Table = () => {
 	const [table, setTable] = useState([]);
 	useEffect(() => {
 		try {
-			fetch("http://localhost:8000/table")
+			fetch("https://v3.football.api-sports.io/standings?league=39&season=2022", {
+			method: "GET",
+			headers: {
+				"x-apisports-key" : process.env.REACT_APP_API_KEY
+			}
+		})
 			.then(response => response.json())
 			.then(data => setTable(data))
 		} catch(error) {

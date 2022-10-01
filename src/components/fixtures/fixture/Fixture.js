@@ -4,10 +4,10 @@ import "./Fixture.css";
 
 const Fixture = (props) => {
 	
-	console.log(props);
+	console.log(props.fixtures);
 	
 	try {
-		return props.fixtures.map(fixture => {
+		return props.fixtures.response.map(fixture => {
 			return (
 				<Link to={`/fixtures/${fixture.fixture.id}`}>
 					<div className="fixture">

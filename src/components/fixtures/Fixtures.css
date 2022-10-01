@@ -2,8 +2,15 @@
 	display: flex;
 	justify-content: center;
 }
+
 .fixtures {
 	display: grid;
-	grid-template-columns: 375px 375px;
+	grid-template-columns: 340px;
 	margin: 1.5em 0;
+}
+
+@media (min-width: 800px) {
+	.fixtures {
+		grid-template-columns: 375px 375px;
+	}
 }
