@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Navbar from "../navbar/Navbar";
 import "./Home.css";
 
 const Home = ({lfc, setLfc, lfcm, setLfcm}) => {

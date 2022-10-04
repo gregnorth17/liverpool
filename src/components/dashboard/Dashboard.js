@@ -2,10 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import Fixtures from "../fixtures/Fixtures";
 import FixtureDetails from "../fixtures/fixture/FixtureDetails";
-// import News from "../news/News";
 import Table from "../table/Table";
 import Squad from "../squad/Squad";
-import Home from "../home/Home";
 
 import backgroundRed from "../../images/home-lfc.jpg";
 import "./Dashboard.css";
