@@ -1,12 +1,10 @@
-import {useState, useEffect} from "react";
-import Home from "./components/home/Home.js";
-import Fixtures from "./components/fixtures/Fixtures.js";
+import {useState} from "react";
 import './App.css';
 import Dashboard from "./components/dashboard/Dashboard.js";
 
 
 function App() {
-	const [lfc, setLfc] = useState(true);
+	const [lfc] = useState(true);
 	// const [lfcm, setLfcm] = useState(null);
 
   return (
