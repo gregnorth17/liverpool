@@ -1,11 +1,7 @@
 import "./TableData.css";
 const TableData = (props) => {
-	
 	try {
-			// const leagueTable = props.table[0].league.standings[0];
-			
-			const leagueTable = props.table.response[0].league.standings;
-			console.log(leagueTable[0]);
+			const leagueTable = props.table[0].league.standings;
 			return leagueTable[0].map((position, index) => {
 				console.log(position.rank)
 				const addBorderLeft = promotionPlaces => {
@@ -15,14 +11,11 @@ const TableData = (props) => {
 						"Promotion - Europa Conference League (Qualification)" : "#34A853",
 						"Relegation - Championship" : "#EA4335"
 					}
-
 					return promotionColor[promotionPlaces];
 				}
-
 				const style = {
 					borderLeft: `2px solid ${addBorderLeft(position.description)}`
 				}
-
 					return (
 						<>
 							<tr className="position-data" key={index} colSpan="15">
@@ -47,7 +40,6 @@ const TableData = (props) => {
 		} catch(error) {
 			console.error(error);
 		}
-
 }
 
 export default TableData;

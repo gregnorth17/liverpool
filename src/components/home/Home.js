@@ -12,7 +12,6 @@ const Home = ({lfc, setLfc, lfcm, setLfcm}) => {
 
 	return (
 		<div className="home">
-			
 			<div className="home-lfc">
 				{/* <Navbar lfc={lfc}/> */}
 				<div className="home-container">

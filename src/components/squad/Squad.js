@@ -1,3 +1,4 @@
+import axios from "axios";
 import {useEffect, useState} from "react";
 import Player from "./player/Player";
 import "./Squad.css";
@@ -14,6 +15,16 @@ const Squad = () => {
 		.then(response => response.json())
 		.then(data => setSquad(data.response[0].players))
 		.catch(error => console.log(error))
+	},[])
+
+	const fetchData = async () => {
+		const results = await axios.get("/.netlify/functions/squadapi")
+		console.log(results.data.response);
+		// setSquad(results.data.response)
+	}
+
+	useEffect(() => {
+		fetchData();
 	},[])
 	
 	return (

@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 import "./Fixture.css";
 
 const Fixture = (props) => {
-	
-	console.log(props.fixtures);
-	
 	try {
-		return props.fixtures.response.map(fixture => {
+		return props.fixtures.map(fixture => {
 			return (
 				<Link to={`/fixtures/${fixture.fixture.id}`}>
 					<div className="fixture">

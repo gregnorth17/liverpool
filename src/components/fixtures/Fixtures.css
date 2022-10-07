@@ -2,7 +2,9 @@
 	display: flex;
 	justify-content: center;
 }
-
+h1 {
+	color: #fff;
+}
 .fixtures {
 	display: grid;
 	grid-template-columns: 340px;

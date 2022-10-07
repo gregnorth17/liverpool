@@ -1,24 +1,21 @@
 import { useEffect, useState } from "react";
 import TableData from "./tabledata/TableData";
 import "./Table.css";
+import axios from "axios";
 
 const Table = () => {
 	const [table, setTable] = useState([]);
+
+	const fetchData = async () => {
+		const results = await axios.get("/.netlify/functions/tableapi");
+		console.log(results.data.response);
+		setTable(results.data.response)
+	}
+
 	useEffect(() => {
-		try {
-			fetch("https://v3.football.api-sports.io/standings?league=39&season=2022", {
-			method: "GET",
-			headers: {
-				"x-apisports-key" : process.env.REACT_APP_API_KEY
-			}
-		})
-			.then(response => response.json())
-			.then(data => setTable(data))
-		} catch(error) {
-			console.log(error)
-		}
-	},[])
-	
+		fetchData()
+	}, [])
+
 	return (
 		<section className="table-section">
 		
