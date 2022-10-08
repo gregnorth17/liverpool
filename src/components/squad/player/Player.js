@@ -1,9 +1,8 @@
 import "./Player.css";
 
 const Player = (props) => {
-	console.log(props)
 	try {
-		return props.squad.map(player => {
+		return props.squad[0].players.map(player => {
 			return (
 				<div className="player">
 					<img src={player.photo} alt="" />
