@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Fixture from "./fixture/Fixture";
 import "./Fixtures.css";
 
-const Fixtures = ({lfc}) => {
+const Fixtures = () => {
 	const [fixtures, setFixtures] = useState([]);
 
 	const fetchData = async () => {

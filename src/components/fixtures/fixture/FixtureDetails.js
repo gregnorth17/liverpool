@@ -1,30 +1,48 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Stats from "./stats/Stats";
 import "./Fixture.css";
 
 const FixtureDetails = (props) => {
+	const [statsHome, setStatsHome] = useState([]);
+	const [statsAway, setStatsAway] = useState([]);
 	const {fixtureId} = useParams();
 	console.log(fixtureId);
 
-	useEffect(() => {
-		fetch("https://v3.football.api-sports.io/fixtures/statistics?fixture=867947&team=40", {
-			method: "GET",
-			headers: {
-				"x-apisports-key" : process.env.REACT_APP_API_KEY
+	
+	try {
+		useEffect(() => {
+			const fetchData = async () => {
+				const results = await axios.get(`/.netlify/functions/fixtureDetailsApi?fixture=${fixtureId}`)
+				console.log(results.data);
+				setStatsHome(results.data.response[0]);
+				setStatsAway(results.data.response[1]);
 			}
-		})
-	.then(response => response.json())
-	.then(data => console.log(data))
-	.catch(err => {
-		console.log(err);
-	});
-		
-	},[])
+			fetchData()
+		},[fixtureId])
+		return (
+			<section className="fixture-details">
+			<>
+				<table>
+					<thead>
+						<tr>
+							<th><img src={statsHome.team.logo} alt="Home team badge" /></th>
+							<th>TEAM STATS</th>
+							<th><img src={statsAway.team.logo} alt="Away team badge" /></th>
+						</tr>
+					</thead>
+					<tbody>
+						<Stats statsHome={statsHome} statsAway={statsAway} />
+					</tbody>
+				</table>
+			</>
+			</section>
+		)
+	} catch(error) {
+		console.log(error)
+	}
 
-
-	return (
-		<div>FixtureDetails</div>
-	)
 }
 
 export default FixtureDetails;
