@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Fixture from "./fixture/Fixture";
 import "./Fixtures.css";
 
-const Fixtures = () => {
+const Fixtures = (props) => {
 	const [fixtures, setFixtures] = useState([]);
 
 	const fetchData = async () => {
@@ -18,7 +18,7 @@ const Fixtures = () => {
 	return (
 		<section className="fixtures-section">
 			<div className="fixtures">
-				<Fixture fixtures={fixtures} />
+				<Fixture setFixture={props.setFixture}  fixtures={fixtures} />
 			</div>
 		</section>
 	)

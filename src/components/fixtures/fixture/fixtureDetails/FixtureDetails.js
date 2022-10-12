@@ -1,15 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Stats from "./stats/Stats";
-import "./Fixture.css";
+// import FixtureScore from "../fixtureScore/FixtureScore";
+// import Stats from "./stats/Stats";
+import "./FixtureDetails.css";
 
 const FixtureDetails = (props) => {
 	const [statsHome, setStatsHome] = useState([]);
 	const [statsAway, setStatsAway] = useState([]);
 	const {fixtureId} = useParams();
-	console.log(fixtureId);
-
+	console.log(props.fixture);
 	
 	try {
 		useEffect(() => {
@@ -23,20 +23,8 @@ const FixtureDetails = (props) => {
 		},[fixtureId])
 		return (
 			<section className="fixture-details">
-			<>
-				<table>
-					<thead>
-						<tr>
-							<th><img src={statsHome.team.logo} alt="Home team badge" /></th>
-							<th>TEAM STATS</th>
-							<th><img src={statsAway.team.logo} alt="Away team badge" /></th>
-						</tr>
-					</thead>
-					<tbody>
-						<Stats statsHome={statsHome} statsAway={statsAway} />
-					</tbody>
-				</table>
-			</>
+				{/* <FixtureScore /> */}
+				ahoy
 			</section>
 		)
 	} catch(error) {
