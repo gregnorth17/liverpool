@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Fixture.css";
 
 const Fixture = (props) => {
+	console.log(props);
 	try {
 		return props.fixtures.map(fixture => {
 			return (

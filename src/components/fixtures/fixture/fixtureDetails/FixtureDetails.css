@@ -2,10 +2,43 @@
 	color: #fff;
 }
 
+.fixture-detail {
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 620px;
+	background: grey;
+
+}
+
+.fixture-status {
+	display: inline-block;
+	font-size: .75rem;
+	margin-left: auto;
+}
+
+.fixture-detail-header {
+	display: flex;
+	justify-content: space-between;
+}
+
 .badge-stats {
 	width: 30px;
 }
 
-.stats-table {
-	/* margin-top: 1em; */
+.fixture-teams {
+	display: flex;
+	justify-content: space-around;
 }
+
+.fixture-team-badge {
+	width: 48px;
+	height: 48px;
+}
+
+.fixture-score {
+	align-self: center;
+}
+
+/* .fixture-team-badge {
+	display: inline-block;
+} */

@@ -9,8 +9,6 @@ import backgroundRed from "../../images/home-lfc.jpg";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-
-	const [fixture, setFixture] = useState({});
 	
 	const style = {
 		backgroundImage: `url(${backgroundRed})`,
@@ -27,8 +25,8 @@ const Dashboard = () => {
 			<Navbar/>
 			<section style={style} className="dashboard">
 			<Routes>
-				<Route path="/fixtures" element={<Fixtures setFixture={setFixture} />} />
-				<Route path="/fixtures/:fixtureId" element={<FixtureDetails fixture={fixture} />} />
+				<Route path="/fixtures" element={<Fixtures />} />
+				<Route path="/fixtures/:fixtureId" element={<FixtureDetails />} />
 				<Route path="/table" element={<Table />} />
 				<Route path="/squad" element={<Squad />} />
 			</Routes>
