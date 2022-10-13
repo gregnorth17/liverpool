@@ -1,24 +1,30 @@
 import axios from "axios";
+import { Routes, Route, NavLink, Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import FixtureScore from "../fixtureScore/FixtureScore";
-// import Stats from "../stats/Stats";
+import FixtureDetailsNav from "./fixtureDetailsNav/FixtureDetailsNav"
+import Stats from "../stats/Stats";
+import Lineup from "../lineup/Lineup";
 import "./FixtureDetails.css";
 
 const FixtureDetails = () => {
 	const [fixture, setFixture] = useState({})
 	const {fixtureId} = useParams();
-	console.log(fixture)
 	
 	try {
 		useEffect(() => {
 			const fetchData = async () => {
 				const results = await axios.get(`/.netlify/functions/fixtureDetailsApi?id=${fixtureId}`)
 				setFixture(results.data.response[0]);
-				
 			}
 			fetchData()
 		},[fixtureId])
+
+		const checkGoals = (team) => {
+			return fixture.events.filter(goal => goal.team.name === team && goal.type === "Goal")
+													 .map(goal => <p>{goal.player.name} {goal.time.elapsed}</p>)
+		}
+
 		return (
 			<section className="fixture-details">
 				<div className="fixture-detail">
@@ -32,16 +38,30 @@ const FixtureDetails = () => {
 							<img className="fixture-team-badge" src={fixture.teams.away.logo} alt="" />
 						</div>
 						<div className="fixture-goals">
-
+							<div className="fixture-home-goals">{checkGoals(fixture.teams.home.name)}</div>
+							<div className="fixture-home-goals">{checkGoals(fixture.teams.away.name)}</div>
 						</div>
+				{/* <FixtureDetailsNav/> */}
+				<nav>
+					<NavLink to={`/fixtures/${fixtureId}/stats`}>STATS</NavLink>
+					<NavLink to={`/fixtures/${fixtureId}/lineup`}>LINEUP</NavLink>
+				</nav>
+				{/* <Stats /> */}
+				<Routes>
+					<Route path="/fixtures/:fixtureId/stats" element={<Stats />} />
+					<Route path="/fixtures/:fixtureId/lineup" element={<Lineup />} />
+				</Routes>
+				{/* <Stats />
+				<Lineup /> */}
+				<Outlet />
 				</div>
-					
+				
+
 			</section>
 		)
 	} catch(error) {
 		console.log(error)
 	}
-
 }
 
 export default FixtureDetails;

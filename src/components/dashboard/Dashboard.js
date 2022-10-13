@@ -26,7 +26,7 @@ const Dashboard = () => {
 			<section style={style} className="dashboard">
 			<Routes>
 				<Route path="/fixtures" element={<Fixtures />} />
-				<Route path="/fixtures/:fixtureId" element={<FixtureDetails />} />
+				<Route path="/fixtures/:fixtureId/*" element={<FixtureDetails />} />
 				<Route path="/table" element={<Table />} />
 				<Route path="/squad" element={<Squad />} />
 			</Routes>

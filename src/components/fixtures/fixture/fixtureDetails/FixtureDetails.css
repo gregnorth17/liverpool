@@ -39,6 +39,7 @@
 	align-self: center;
 }
 
-/* .fixture-team-badge {
-	display: inline-block;
-} */
+.fixture-goals {
+	display: flex;
+	justify-content: space-between;
+}
