@@ -5,8 +5,8 @@ const fixtureDetailsNav = (props) => {
 	return (
 		<>
 		<nav>
-			<NavLink to={`/fixtures/${props.fixtureId}/stats`}>STATS</NavLink>
-			{/* <NavLink>LINEUP</NavLink> */}
+			<NavLink to={`stats`}>STATS</NavLink>
+			<NavLink to={`lineup`}>LINEUP</NavLink>
 		</nav>
 
 		</>

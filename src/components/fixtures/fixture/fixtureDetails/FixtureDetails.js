@@ -10,7 +10,7 @@ import "./FixtureDetails.css";
 const FixtureDetails = () => {
 	const [fixture, setFixture] = useState({})
 	const {fixtureId} = useParams();
-	
+
 	try {
 		useEffect(() => {
 			const fetchData = async () => {
@@ -41,22 +41,12 @@ const FixtureDetails = () => {
 							<div className="fixture-home-goals">{checkGoals(fixture.teams.home.name)}</div>
 							<div className="fixture-home-goals">{checkGoals(fixture.teams.away.name)}</div>
 						</div>
-				{/* <FixtureDetailsNav/> */}
-				<nav>
-					<NavLink to={`/fixtures/${fixtureId}/stats`}>STATS</NavLink>
-					<NavLink to={`/fixtures/${fixtureId}/lineup`}>LINEUP</NavLink>
-				</nav>
-				{/* <Stats /> */}
+				<FixtureDetailsNav/>
 				<Routes>
-					<Route path="/fixtures/:fixtureId/stats" element={<Stats />} />
-					<Route path="/fixtures/:fixtureId/lineup" element={<Lineup />} />
+					<Route path="stats" element={<Stats stats={fixture.statistics} />} />
+					<Route path="lineup" element={<Lineup lineup={fixture.lineups} />} />
 				</Routes>
-				{/* <Stats />
-				<Lineup /> */}
-				<Outlet />
 				</div>
-				
-
 			</section>
 		)
 	} catch(error) {
