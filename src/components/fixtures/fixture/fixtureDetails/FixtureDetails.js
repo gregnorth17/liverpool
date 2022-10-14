@@ -1,10 +1,10 @@
 import axios from "axios";
-import { Routes, Route, NavLink, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FixtureDetailsNav from "./fixtureDetailsNav/FixtureDetailsNav"
 import Stats from "../stats/Stats";
-import Lineup from "../lineup/Lineup";
+import Lineups from "../lineups/Lineups";
 import "./FixtureDetails.css";
 
 const FixtureDetails = () => {
@@ -44,7 +44,7 @@ const FixtureDetails = () => {
 				<FixtureDetailsNav/>
 				<Routes>
 					<Route path="stats" element={<Stats stats={fixture.statistics} />} />
-					<Route path="lineup" element={<Lineup lineup={fixture.lineups} />} />
+					<Route path="lineups" element={<Lineups lineups={fixture.lineups} />} />
 				</Routes>
 				</div>
 			</section>

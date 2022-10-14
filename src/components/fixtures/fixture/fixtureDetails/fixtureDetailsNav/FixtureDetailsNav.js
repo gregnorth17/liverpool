@@ -6,7 +6,7 @@ const fixtureDetailsNav = (props) => {
 		<>
 		<nav>
 			<NavLink to={`stats`}>STATS</NavLink>
-			<NavLink to={`lineup`}>LINEUP</NavLink>
+			<NavLink to={`lineups`}>LINEUP</NavLink>
 		</nav>
 
 		</>
