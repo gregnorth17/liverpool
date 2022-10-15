@@ -4,7 +4,7 @@
 	/* width: 70%; */
 }
 
-table {
+.league-table {
 	margin: 0 auto;
 	border: 1px solid var(--gray);
 	/* max-width: 750px; */
@@ -77,7 +77,7 @@ td {
 }
 
 @media (min-width: 600px) {
-	table {
+	.league-table {
 		max-width: 600px;
 		font-size: 1rem; 
 	}

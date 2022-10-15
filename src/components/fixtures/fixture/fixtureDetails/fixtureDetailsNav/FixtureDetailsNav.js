@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-
+import "./FixtureDetailsNav.css";
 
 const fixtureDetailsNav = (props) => {
 	return (
 		<>
-		<nav>
-			<NavLink to={`stats`}>STATS</NavLink>
-			<NavLink to={`lineups`}>LINEUP</NavLink>
+		<nav className="fixture-detail-nav">
+			<NavLink className="fixture-detail-nav-link" to={`stats`}>STATS</NavLink>
+			<NavLink className="fixture-detail-nav-link" to={`lineups`}>LINEUP</NavLink>
 		</nav>
 
 		</>

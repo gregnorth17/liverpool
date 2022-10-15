@@ -23,16 +23,16 @@ const Stats = (props) => {
 				<thead>
 					<tr>
 						<th><img className="badge-stats" src={statsHome.team.logo} alt="Home team badge" /></th>
-						<th>TEAM STATS</th>
+						<th className="heading-text">TEAM STATS</th>
 						<th><img className="badge-stats" src={statsAway.team.logo} alt="Away team badge" /></th>
 					</tr>
 				</thead>
 				<tbody>
 				{statsHome.statistics.map((stat, index) => {
 					return  <tr>
-										<td>{stat.value}</td>
-										<td>{stat.type}</td>
-										<td>{statsAway.statistics[index].value}</td>
+										<td className="table-data body-text">{stat.value}</td>
+										<td className="table-data heading-text">{stat.type}</td>
+										<td className="table-data body-text">{statsAway.statistics[index].value}</td>
 									</tr>
 				})}		
 				</tbody>

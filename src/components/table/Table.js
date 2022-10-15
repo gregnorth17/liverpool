@@ -19,7 +19,7 @@ const Table = () => {
 	return (
 		<section className="table-section">
 		
-			<table>
+			<table className="league-table">
 				<caption className="table-caption">
 					<h2 className="table-caption-title">Qualification/Relegation</h2>
 					<div className="table-key">
