@@ -9,7 +9,7 @@ const Lineups = (props) => {
 	useEffect(() => {
 		setLineupHome(props.lineups[0]);
 		setLineupAway(props.lineups[1]);
-	},[])
+	},[props.lineups])
 
 	
 	try {
