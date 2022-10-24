@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-// import "./Stats.css";
+import "./Stats.css";
 
 const Stats = (props) => {
 	console.log(props);
@@ -11,7 +11,7 @@ const Stats = (props) => {
 		setStatsHome(props.stats[0]);
 		setStatsAway(props.stats[1]);
 		
-	},[])
+	},[props.stats])
 
 	try{
 		return (

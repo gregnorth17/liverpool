@@ -6,7 +6,6 @@ import FixtureDetailsNav from "./fixtureDetailsNav/FixtureDetailsNav"
 import Stats from "../stats/Stats";
 import Lineups from "../lineups/Lineups";
 import "./FixtureDetails.css";
-import Fixtures from "../../Fixtures";
 
 const FixtureDetails = () => {
 	const [fixture, setFixture] = useState({})
