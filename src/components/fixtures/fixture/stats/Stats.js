@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import "./Stats.css";
+// import "./Stats.css";
 
 const Stats = (props) => {
 	console.log(props);
