@@ -13,10 +13,6 @@ const Stats = (props) => {
 		
 	},[])
 
-	const GetStats = () => {
-		
-	}
-
 	try{
 		return (
 			<table className="stats-table">
