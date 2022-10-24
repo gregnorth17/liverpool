@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.transition-fade {
+	opacity: 1;
+	transition: 250ms;
+}
+
+html.is-animating .tranition-fade {
+	opacity: 0;
+}

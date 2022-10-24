@@ -16,7 +16,7 @@ const Fixtures = (props) => {
 	},[])
 
 	return (
-		<section className="fixtures-section">
+		<section className="fixtures-section transition-fade">
 			<div className="fixtures">
 				<Fixture setFixture={props.setFixture}  fixtures={fixtures} />
 			</div>

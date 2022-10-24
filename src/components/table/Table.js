@@ -17,7 +17,7 @@ const Table = () => {
 	}, [])
 
 	return (
-		<section className="table-section">
+		<section className="table-section transition-fade">
 		
 			<table className="league-table">
 				<caption className="table-caption">

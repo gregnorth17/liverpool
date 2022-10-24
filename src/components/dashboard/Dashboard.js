@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import Navbar from "../navbar/Navbar";
 import Fixtures from "../fixtures/Fixtures";
 import FixtureDetails from "../fixtures/fixture/fixtureDetails/FixtureDetails";
@@ -19,17 +18,19 @@ const Dashboard = () => {
 		backgroundColor: "black",
 		minHeight: "100vh"
 	}
+
+
 	
 	return (
 		<>
 			<Navbar/>
 			<section style={style} className="dashboard">
-			<Routes>
-				<Route path="/fixtures" element={<Fixtures />} />
-				<Route path="/fixtures/:fixtureId/*" element={<FixtureDetails />} />
-				<Route path="/table" element={<Table />} />
-				<Route path="/squad" element={<Squad />} />
-			</Routes>
+				<Routes>
+					<Route path="/fixtures" element={<Fixtures />} />
+					<Route path="/fixtures/:fixtureId/*" element={<FixtureDetails />} />
+					<Route path="/table" element={<Table />} />
+					<Route path="/squad" element={<Squad />} />
+				</Routes>
 			</section>
 		</>
 	)

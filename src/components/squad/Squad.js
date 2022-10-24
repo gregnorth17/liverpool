@@ -16,7 +16,7 @@ const Squad = () => {
 	},[])
 	
 	return (
-		<div className="squad">
+		<div className="squad transition-fade">
 			<Player squad={squad} />
 		</div>
 	)

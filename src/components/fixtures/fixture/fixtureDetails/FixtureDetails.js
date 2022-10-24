@@ -27,7 +27,7 @@ const FixtureDetails = () => {
 		}
 
 		return (
-			<section className="fixture-details">
+			<section className="fixture-details transition-fade">
 				<div className="fixture-detail">
 				<Link to="/fixtures">{fixture.teams.home.name} vs {fixture.teams.away.name}</Link>
 					<div className="fixture-detail-header">

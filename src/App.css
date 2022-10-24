@@ -13,3 +13,15 @@ a {
 	text-decoration: none;
 }
 
+.transition-fade {
+	opacity: 1;
+	transition: 250ms;
+}
+
+html.is-animating .transition {
+	opacity: 0;
+}
+
+
+
+
