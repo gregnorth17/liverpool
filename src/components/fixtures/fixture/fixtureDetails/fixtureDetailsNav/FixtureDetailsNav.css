@@ -2,10 +2,15 @@
 	background-color: rgb(48, 49, 52);
 	text-align: center;
 	padding: 1em 0;
+	margin-bottom: 1em;
 }
 
 .fixture-detail-nav-link {
 	color: #FFFFFF;
 	padding: 0 1.25em;
+}
+
+.fixture-detail-nav-link:hover {
+	opacity: .5;
 }
 

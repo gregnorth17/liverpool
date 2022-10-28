@@ -9,6 +9,10 @@
 	background: var(--dk-gray);
 }
 
+.fixture:hover {
+	background: black;
+}
+
 p {
 	margin: 0;
 }

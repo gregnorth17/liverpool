@@ -1,11 +1,10 @@
 import axios from "axios";
-import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import FixtureDetailsNav from "./fixtureDetailsNav/FixtureDetailsNav"
-import Stats from "../stats/Stats";
+import { Link, Route, Routes, useParams } from "react-router-dom";
 import Lineups from "../lineups/Lineups";
+import Stats from "../stats/Stats";
 import "./FixtureDetails.css";
+import FixtureDetailsNav from "./fixtureDetailsNav/FixtureDetailsNav";
 
 const FixtureDetails = () => {
 	const [fixture, setFixture] = useState({})
@@ -26,9 +25,9 @@ const FixtureDetails = () => {
 		}
 
 		return (
-			<section className="fixture-details transition-fade">
+			<section className="fixture-details">
 				<div className="fixture-detail">
-				<Link to="/fixtures">{fixture.teams.home.name} vs {fixture.teams.away.name}</Link>
+				<Link className="fixture-link" to="/fixtures">{`⬅ ${fixture.teams.home.name}`} vs {fixture.teams.away.name}</Link>
 					<div className="fixture-detail-header">
 							<span className="fixture-competition body-text">{fixture.league.name} {new Date(fixture.fixture.date).toLocaleDateString('en-UK')}</span>
 							<span className="fixture-status heading-text">{fixture.fixture.status.long}</span>
@@ -48,6 +47,7 @@ const FixtureDetails = () => {
 							<div className="fixture-home-goals body-text heading-text">{checkGoals(fixture.teams.home.name)}</div>
 							<div className="fixture-away-goals body-text heading-text">{checkGoals(fixture.teams.away.name)}</div>
 						</div>
+				
 				<FixtureDetailsNav/>
 				<Routes>
 					<Route path="stats" element={<Stats stats={fixture.statistics} />} />

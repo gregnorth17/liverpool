@@ -1,7 +1,10 @@
 .fixture-details {
 	color: #fff;
 	/* background-color: rgb(48, 49, 52); */
+	/* margin-bottom: 1em; */
 }
+
+
 
 .heading-text {
 	color: #bdc1c6;
@@ -13,10 +16,14 @@
 
 .fixture-detail {
 	margin: 0 auto;
-	padding: 1em;
+	padding: 1em 2em;
 	max-width: 620px;
 	background-color: #202124;
+}
 
+.fixture-link {
+	margin-bottom: 1em;
+	color:#9aa0a6;
 }
 
 .fixture-status {
@@ -28,6 +35,8 @@
 .fixture-detail-header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	margin: 1em 0;
 }
 
 .fixture-score {
@@ -41,6 +50,7 @@
 .fixture-teams {
 	display: flex;
 	justify-content: space-around;
+	margin-bottom: 1em;
 }
 
 .fixture-home-team,
@@ -61,4 +71,8 @@
 	display: flex;
 	justify-content: space-between;
 	font-size: .75rem;
+}
+
+.fixture-goals {
+	margin-bottom: 1em;
 }

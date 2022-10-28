@@ -4,11 +4,16 @@ import "./Fixture.css";
 
 const Fixture = (props) => {
 	console.log(props);
+
+	const style = {
+
+	}
+
 	try {
 		return props.fixtures.map(fixture => {
 			return (
 				<>
-					<Link to={`/fixtures/${fixture.fixture.id}`}>
+					<Link style={style} to={`/fixtures/${fixture.fixture.id}`}>
 						<div className="fixture">
 							<div className="teams">
 							<p className="competition">{fixture.league.name}</p>

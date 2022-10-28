@@ -20,3 +20,10 @@
 .lineup-title {
 	text-transform: uppercase;
 }
+
+.lineup-player-number {
+	display: inline-block;
+	width: 30px;
+}
+
+
